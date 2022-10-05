@@ -1,1 +1,1 @@
-CreateObject("WScript.Shell").Run "cmd /c poseshell.bat",0 
+CreateObject("WScript.Shell").Run "cmd /c python poseshell.pyw",0 
