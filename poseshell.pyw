@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 import keyboard
 import time
+import pygetwindow as gw
 
 def saiNew():
     keyboard.press_and_release("windows+2")
@@ -12,11 +13,24 @@ def saiNew():
 
 def saiSave():
     global posenum
-    keyboard.press_and_release("windows+2")
+    Saiwindow=gw.getWindowsWithTitle("SAI")[0]
+    Saiwindow.activate()
+    keyboard.press_and_release("ctrl+w")
     time.sleep(0.2)
-    keyboard.press_and_release("alt+f4")
+    keyboard.press_and_release('enter')
     time.sleep(0.2)
-    for i in range(int(posenum)):
+    keyboard.press_and_release('tab')
+    time.sleep(0.2)
+    keyboard.press_and_release('ctrl+a')
+    time.sleep(0.2)
+    keyboard.write("C:\\Users\\14491\\Desktop\\#\\#15-18\\")
+    time.sleep(0.2)
+    keyboard.press_and_release('enter')
+    time.sleep(0.2)
+    keyboard.press_and_release('tab')
+    for i in range(int(posenum)-1):
+        keyboard.press_and_release('ctrl+w')
+        time.sleep(0.2)
         keyboard.press_and_release("enter")
         time.sleep(0.2)
         date=time.ctime()
